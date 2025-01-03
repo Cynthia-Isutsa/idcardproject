@@ -28,6 +28,7 @@ class IdCard extends StatelessWidget {
       body: const Padding(
         padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
               "NAME",
@@ -42,6 +43,7 @@ class IdCard extends StatelessWidget {
                 color: Colors.amberAccent,
                 letterSpacing: 2.0,
                 fontSize: 28.0,
+                fontWeight: FontWeight.bold,
               ),
               ),
           ]
