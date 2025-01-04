@@ -25,19 +25,20 @@ class IdCard extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
       ), 
-      body: const Padding(
-        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               "NAME",
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2.0,
               ),
               ),
-               Text(
+              const SizedBox(height: 10.0),
+               const Text(
               "Cynthia Isutsa",
               style: TextStyle(
                 color: Colors.amberAccent,
@@ -46,6 +47,44 @@ class IdCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
               ),
+                const SizedBox(height: 30.0),
+                const Text(
+              "CURRENT LEVEL",
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+              ),
+              const SizedBox(height: 10.0),
+               const Text(
+              "8",
+              style: TextStyle(
+                color: Colors.amberAccent,
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
+              ), 
+              const SizedBox(height: 30.0),
+              Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.email,
+                    color: Colors.grey[400],
+                  ),
+                  const SizedBox(width: 10.0),
+                  Text(
+                    'cynthiaisutsa@gmail.com',
+                    style: TextStyle(
+                      color: Colors.grey[400],
+                      fontSize: 18.0,
+                      letterSpacing: 1.0,
+                    ),
+                  ),
+                ],
+              )
+
+              
           ]
         ),
       ),
