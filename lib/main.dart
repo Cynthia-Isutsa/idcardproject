@@ -6,8 +6,15 @@ void main() {
   ));
 }
 
-class IdCard extends StatelessWidget {
+class IdCard extends StatefulWidget {
   const IdCard ({super.key});
+
+  @override
+  State<IdCard> createState() => _IdCardState();
+}
+
+class _IdCardState extends State<IdCard> {
+ int levelState = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +32,15 @@ class IdCard extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
       ), 
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => {
+          setState(() {
+            levelState += 1;
+          })
+        },
+        backgroundColor: Colors.grey[800],
+        child: const Icon(Icons.add),
+        ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
@@ -68,9 +84,9 @@ class IdCard extends StatelessWidget {
               ),
               ),
               const SizedBox(height: 10.0),
-               const Text(
-              "8",
-              style: TextStyle(
+                Text(
+              '$levelState',
+              style: const TextStyle(
                 color: Colors.amberAccent,
                 letterSpacing: 2.0,
                 fontSize: 28.0,
@@ -101,5 +117,7 @@ class IdCard extends StatelessWidget {
         ),
       ),
     );
+  
   }
 }
+
